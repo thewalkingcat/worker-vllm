@@ -17,13 +17,13 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     python3 -m pip install --upgrade -r /requirements.txt
 
 # Setup for Option 2: Building the Image with the Model included
-ARG MODEL_NAME=""
+ARG MODEL_NAME="AuriAetherwiing/TQ3.5-27B-Musica-v1"
 ARG TOKENIZER_NAME=""
-ARG BASE_PATH="/runpod-volume"
+ARG BASE_PATH="/models"
 ARG QUANTIZATION=""
 ARG MODEL_REVISION=""
 ARG TOKENIZER_REVISION=""
-ARG VLLM_NIGHTLY="false"
+ARG VLLM_NIGHTLY="true"
 
 ENV MODEL_NAME=$MODEL_NAME \
     MODEL_REVISION=$MODEL_REVISION \
